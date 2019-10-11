@@ -1,16 +1,14 @@
 package testers;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class Umer {
 
 	public static void main(String[] args) {
 		
-		//set property for where the chrome driver is located
+		//set property for where the chrome driver is located PLEASE CHANGE TO THE LOCATION OF THE DRIVER ON YOUR LAPTOP
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Umer\\eclipse-workspace\\funtesters\\src\\main\\resources\\chromedriver.exe");
 		//DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 		//capabilities.setCapability("marionette",true);
@@ -25,7 +23,7 @@ public class Umer {
 		//FirefoxDriver driver = new FirefoxDriver();
 		
 		//Open the Webpage
-		driver.get("https://www.google.com");
+		driver.get("https://www.youtube.com");
 		
 		//Get the Webpage title
 		String title = driver.getTitle();
@@ -34,7 +32,7 @@ public class Umer {
 		System.out.println(title);
 		
 		//Close the Webpage
-		//driver.close();
+		driver.close();
 
 		
 		
