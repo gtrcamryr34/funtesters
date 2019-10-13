@@ -23,7 +23,7 @@ public class Umer {
 		//FirefoxDriver driver = new FirefoxDriver();
 		
 		//Open the Webpage
-		driver.get("https://www.youtube.com");
+		driver.get("https://www.google.com");
 		
 		//Get the Webpage title
 		String title = driver.getTitle();
