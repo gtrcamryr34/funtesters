@@ -1,27 +1,39 @@
 package testers;
 
+import com.google.common.annotations.VisibleForTesting;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 public class Umer {
 
-	public static void main(String[] args) {
-		
-		//set property for where the chrome driver is located PLEASE CHANGE TO THE LOCATION OF THE DRIVER ON YOUR LAPTOP
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Umer\\eclipse-workspace\\funtesters\\src\\main\\resources\\chromedriver.exe");
-		//DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-		//capabilities.setCapability("marionette",true);
+
+
+	@BeforeTest
+	public void SetupChrom() {
 		ChromeOptions co = new ChromeOptions();
 		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		capabilities.setCapability(ChromeOptions.CAPABILITY, co);
-		
-		
+
+
 		//Initiate webdriver
-		ChromeDriver driver = new ChromeDriver();
+
+
+	}
+	@Test
+	public void OpenGoogle() {
 		
+		//set property for where the chrome driver is located PLEASE CHANGE TO THE LOCATION OF THE DRIVER ON YOUR LAPTOP
+		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\Umer\\eclipse-workspace\\funtesters\\src\\main\\resources\\chromedriver.exe");
+		//DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+		//capabilities.setCapability("marionette",true);
+
 		//FirefoxDriver driver = new FirefoxDriver();
-		
+		ChromeDriver driver = new ChromeDriver();
+
 		//Open the Webpage
 		driver.get("https://www.google.com");
 		
@@ -34,13 +46,5 @@ public class Umer {
 		//Close the Webpage
 		driver.close();
 
-		
-		
-		
-		
-		
-		
-
 	}
-
 }
