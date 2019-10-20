@@ -18,16 +18,16 @@ public class Umer {
 		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		capabilities.setCapability(ChromeOptions.CAPABILITY, co);
 
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Umer\\Documents\\Projects\\funtesters\\src\\main\\resources\\chromedriver.exe");
 
 		//Initiate webdriver
 
 
 	}
-	@Test
+	@Test(priority = 1)
 	public void OpenGoogle() {
 		
 		//set property for where the chrome driver is located PLEASE CHANGE TO THE LOCATION OF THE DRIVER ON YOUR LAPTOP
-		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\Umer\\eclipse-workspace\\funtesters\\src\\main\\resources\\chromedriver.exe");
 		//DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 		//capabilities.setCapability("marionette",true);
 
@@ -42,9 +42,10 @@ public class Umer {
 		
 		//Print the Webpage title
 		System.out.println(title);
-		
-		//Close the Webpage
-		driver.close();
 
+		//Close Browser
+		driver.close();
+		
 	}
+
 }
