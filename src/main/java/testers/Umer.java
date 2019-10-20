@@ -27,7 +27,7 @@ public class Umer {
 	public void OpenGoogle() {
 		
 		//set property for where the chrome driver is located PLEASE CHANGE TO THE LOCATION OF THE DRIVER ON YOUR LAPTOP
-		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\Umer\\eclipse-workspace\\funtesters\\src\\main\\resources\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\4age\\Documents\\Projects\\funtesters\\src\\main\\resources\\chromedriver.exe");
 		//DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 		//capabilities.setCapability("marionette",true);
 
@@ -47,4 +47,7 @@ public class Umer {
 		driver.close();
 
 	}
+
+
+
 }

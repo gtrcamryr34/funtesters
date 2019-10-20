@@ -9,8 +9,5 @@
         <module name="funtesters" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="funtesters" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>
