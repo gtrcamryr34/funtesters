@@ -21,7 +21,7 @@ public class Umer2 {
     @Test
     public void OpenChrome() {
         ChromeDriver driver = new ChromeDriver();
-        String google = "https://google.com";
+        String google = "https://Facebook.com";
 
         driver.get(google);
 
