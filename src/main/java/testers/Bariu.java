@@ -1,5 +1,7 @@
 package testers;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -18,12 +20,18 @@ public class Bariu {
     @Test
     public void OpenChrome() {
         ChromeDriver driver = new ChromeDriver();
-        String google = "https://google.com";
+        String google = "https://facebook.com";
         driver.get(google);
         String title = driver.getTitle();
         String url = driver.getCurrentUrl();
+
+        WebElement email = driver.findElement(By.name("email"));
+        WebElement pass = driver.findElement(By.name("pass"));
+
+        email.sendKeys("myemail");
+        pass.sendKeys("mypassword");
         System.out.println("my first Automation is going to " + title + " and the link for it is " + url);
-        driver.close();
+
     }
 }
 
