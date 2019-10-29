@@ -6,7 +6,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class Umer2 {
+public class ahmed2 {
 
     @BeforeTest
     public void SetupChrome() {
