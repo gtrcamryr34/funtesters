@@ -1,6 +1,7 @@
 package testers;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -26,8 +27,15 @@ public class TarakFacebookLogin {
         String username = "123";
         String password = "123";
 
-        driver.findElement(By.name("email")).sendKeys(username);
-        driver.findElement(By.name("pass")).sendKeys(password);
+        WebElement usernamelogin = driver.findElement(By.name("email"));
+        WebElement passwordlogin = driver.findElement(By.name("pass"));
+
+
+        usernamelogin.click();
+        usernamelogin.sendKeys(username);
+
+        passwordlogin.click();
+        passwordlogin.sendKeys(password);
 
         driver.findElement(By.id("u_0_2")).click();
 
