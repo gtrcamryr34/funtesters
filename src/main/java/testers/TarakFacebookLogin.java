@@ -8,7 +8,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class Tarak  {
+public class TarakFacebookLogin {
 
     @BeforeTest
     public void SetupChrome () {
@@ -21,24 +21,27 @@ public class Tarak  {
     @Test
     public void login () {
         ChromeDriver driver = new ChromeDriver();
-        String url = "https://the-internet.herokuapp.com/login";
+        String url = "https://facebook.com";
         driver.get(url);
 
-        String username = "tomsmith";
-        String password = "SuperSecretPassword!";
+        String username = "123";
+        String password = "123";
 
-        WebElement usernameLogin = driver.findElement(By.name("username"));
-        WebElement passwordLogin = driver.findElement(By.name("password"));
-        WebElement loginButton = driver.findElement(By.xpath("//*[@id=\"login\"]/button/i"));
-
-
-        usernameLogin.sendKeys(username);
-        passwordLogin.sendKeys(password);
-
-        loginButton.click();
-
-    }
+        WebElement usernamelogin = driver.findElement(By.name("email"));
+        WebElement passwordlogin = driver.findElement(By.name("pass"));
 
 
+        usernamelogin.click();
+        usernamelogin.sendKeys(username);
+
+        passwordlogin.click();
+        passwordlogin.sendKeys(password);
+
+        driver.findElement(By.id("u_0_2")).click();
 
     }
+
+
+
+
+}
